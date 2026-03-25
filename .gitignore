@@ -218,3 +218,17 @@ crash.*.log
 *.parquet
 *.csv
 
+
+credentials/
+.env
+mage_data/
+
+default_repo/
+nasa_project/__pycache__/
+nasa_project/.file_versions/
+nasa_project/mage-ai.db
+**/__pycache__/
+**/.file_versions/
+*.db
+*.pyc
+gcp-service-account.json

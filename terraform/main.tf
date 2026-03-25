@@ -12,17 +12,16 @@ provider "google" {
   region  = var.region
 }
 
-# Criação do Data Lake (Google Cloud Storage)
 resource "google_storage_bucket" "data-lake-bucket" {
   name          = var.gcs_bucket_name
   location      = var.location
-  force_destroy = true # Facilita a exclusão do projeto após o curso
+  force_destroy = true 
 
   storage_class = var.gcs_storage_class
 
   lifecycle_rule {
     condition {
-      age = 30 # Apaga arquivos mais velhos que 30 dias (opcional, bom para economizar)
+      age = 30
     }
     action {
       type = "Delete"

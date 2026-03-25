@@ -1,29 +1,29 @@
 variable "project" {
-  description = "Project ID no GCP"
+  description = "GCP Project ID"
   type        = string
 }
 
 variable "region" {
-  description = "Região principal do projeto"
+  description = "Primary project region"
   type        = string
 }
 
 variable "location" {
-  description = "Localização dos recursos"
+  description = "Resource location"
   type        = string
 }
 
 variable "bq_dataset_name" {
-  description = "Nome do Dataset no BigQuery"
+  description = "BigQuery Dataset name"
   type        = string
 }
 
 variable "gcs_bucket_name" {
-  description = "Nome do Bucket no GCS (Deve ser único globalmente!)"
+  description = "GCS Bucket name (must be globally unique!)"
   type        = string
 }
 
 variable "gcs_storage_class" {
-  description = "Classe de armazenamento do Bucket"
+  description = "Bucket storage class"
   type        = string
 }

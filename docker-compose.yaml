@@ -1,0 +1,16 @@
+services:
+  mage:
+    image: mageai/mageai:latest
+    command: mage start nasa_project
+    container_name: mage_nasa
+    ports:
+      - "6789:6789"
+    volumes:
+      - .:/home/src/
+    env_file:
+      - .env
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /home/src/credentials/gcp-service-account.json
+      MAGE_CODE_PATH: /home/src/nasa_project
+      PROJECT_NAME: nasa_project
+    restart: on-failure:5
